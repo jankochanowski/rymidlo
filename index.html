@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="pl-PL">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Jak nauczyć komputer rymować po polsku</title>
+
+<link rel="stylesheet" type="text/css" href="https://jankochanowski.github.io/style.css">
+<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+<style>
+.prettyprint {
+border: none !important;
+margin-top:0px !important;}
+
+body, html {
+max-width:900px;
+margin:auto;
+    overflow-x: visible !important;
+background-color: white !important;
+}
+.jnkrpp-content{
+background-color:white;
+}
+
+.jnkrpp-sticky {
+max-width:900px;
+margin:auto;
+}
+
+.jnkrpp-footer {
+  background-color:#f5f5f5 !important;
+ 
+}
+#jnkrpp-navbar {
+background-color:#514f4f !important;}
+
+@media screen and (min-width: 890px){
+#jnkrpp-navbar {
+background-color:#514f4f !important;
+/*#ddd*/
+/*background-image: linear-gradient(to bottom right, #514f4f, #7a7777);
+
+
+
+background: linear-gradient(-70deg, rgba(0, 0, 0, 0) 30%, #514f4f 30%), url( "https://jankochanowski.github.io/kk8.png");*/
+}}
+
+@media screen and (min-width: 800px) {
+.jnkrpp-backgr {
+width:85% !important;
+}
+}
+
+#jnkrpp-navbar a.active {
+ 
+  border-left: #514f4f solid 5px !important;
+
+}
+
+
+#jnkrpp-myBtnScrollingTop {
+
+  background-color: #514f4f !important;
+  }
+
+</style>
+   
+</head>
+
+<body>
+    <button onclick="topFunction()" id="jnkrpp-myBtnScrollingTop" title="Do góry">⇧</button>
+
+    <div class="jnkrpp-forBg">
+        <img class="jnkrpp-backgr" src="https://jankochanowski.github.io/JanKochanowskiVsKomputer.jpg" alt="background image - man versus computer">
+    </div>
+
+    <div id="jnkrpp-navbar">
+        <a class="active" onclick="topFunction()" href="javascript:void(0)">⌂</a>
+        <a href="#analizator-link">Analizator</a>
+        <a href="#teoria-link">Teoria</a>
+    </div>
+    <a id="analizator-link"></a>
+
+    <div class="jnkrpp-content">
+        <div class="jnkrpp-analizator">
+            <br>
+            <h2 class="jnkrpp-analizator__subtitle">Analizator - wersja testowa</h2>
+            <div class="jnkrpp-analizator__engine">
+           
+
+            <p> 
+            
+            Wprowadź wartość i kliknij <strong>Analiza</strong>:</p>
+
+            <input class="jnkrpp-analizator__input" id="verse" type=text  value="Kupić by cię, mądrości, za drogie pieniądze">
+           
+            <p id="errorMsg"></p>
+
+            <button class="jnkrpp-button" onclick="summaryFunctions()">Analiza</button>
+            <!-- div engine close below-->
+            </div>
+           
+<br>
+<div id="jnkrpp-analizator__result-box">
+            <p><strong>Wynik analizy:</strong></p>
+
+            <table>
+                <tr>
+                    <td>Ostatnie słowo</td>
+                    <td> = </td>
+                    <td><span id="lastWord"></span></td>
+                </tr>
+                <tr>
+                    <td>Miejsce ostatniego akcentu</td>
+                    <td> = </td>
+                    <td><span id="lastAccent"></span></td>
+                </tr>
+                <tr>
+                    <td>Typ rymu</td>
+                    <td> = </td>
+                    <td><span id="paroxytone"></span></td>
+                </tr>
+                <tr>
+                    <td>Metrum wiersza</td>
+                    <td> = </td>
+                    <td><span id="countSyllables"></span></td>
+                </tr>
+                <tr>
+                    <td>findRhymeArea()</td>
+                    <td> = </td>
+                    <td><span id="findRhymeArea"></span></td>
+                </tr>
+                <tr>
+                    <td>Warianty homofoniczne</td>
+                    <td> = </td>
+                    <td><span id="homophonicElements"></span></td>
+                </tr>
+
+            </table>
+          
+            
+            </div>
+            <a id="teoria-link"></a>
+
+        </div>
+        
+        <br>
+     
+        <!-- <hr class="jnkrpp-hr"> -->
+       
+        <br>
+        <div class="jnkrpp-about">
+            <h2 class="jnkrpp-about__subtitle">Teoria</h2>
+            <h3 class="jnkrpp-about__step-no"></h3>
+            <div class="jnkrpp-about__problem-desc"><strong>Wersja robocza silnika wyszukiwarki rymów</strong>, który w przeciwieństwie do internetowych słowników rymów (w jęz. polskim) potrafi samodzielnie obliczyć miejsce padania akcentu i dzięki temu wyznaczyć przestrzeń rymową (część słowa, która powinna się rymować). Oblicza też liczbę sylab i wykrywa (z marginesem błędu), w jakich przypadkach samogłoska <strong><em>i</em></strong> nie pełni funkcji zgłoskotwórczej (jest to niezbędne, aby prawidłowo wyznaczyć obszar współdźwięczności). Docelowo silnik będzie również zwracał tablicę wszystkich wariantów homofonicznych danego rymu, uwzględniając m.in. zjawisko ubezdźwięcznienia wygłosu czy pary głosek różnych ortograficznie, ale identycznie brzmiących (<strong><em>ó</em></strong> i <strong><em>u</em></strong>, <strong><em>rz</em></strong> i <strong><em>ż</em></strong>, <strong><em>ch</em></strong> i <strong><em>h</em></strong>). Silnik jest dodatkowo rozbudowywany o analizator wersyfikacyjny. 
+
+            </div>
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 1:</strong> Gdzie szukać rymu?</h3>
+            <div class="jnkrpp-about__problem-desc"><strong>Rym</strong> to „powtórzenie jednakowych lub podobnych układów brzmieniowych w zakończeniach wyrazów zajmujących określoną pozycję w obrębie wersu (w wierszu) lub zdania (w prozie)” [<span class="jnkrpp-tooltip">STL<span class="jnkrpp-tooltiptext">Słownik terminów literackich, red. M. Głowiński, T. Kostkiewiczowa, A. Okopień-Sławińska, J. Sławiński, Wrocław 1998.</span></span>].
+                <br>
+                <br> Załóżmy dla uproszczenia, że ta „określona pozycja w obrębie wersu” to pozycja <strong>końcowa</strong>, ponieważ w większości wierszy występują <strong>rymy końcowe</strong>. Pierwszy krok jest więc prosty - należy znaleźć ostatni wyraz w danym ciągu znaków (wersie):
+            </div>
+            <br>
+            <input class="jnkrpp-about__input" id="first-problem" type=text size=33 value="Kupić by cię, mądrości, za drogie pieniądze">
+            <button class="jnkrpp-about__button" onclick="firstStepFunction()">Kliknij</button>
+            <br>
+            <br>
+            <div id="first-problem-result"><strong>Ostatnie słowo = </strong><span id="first-problem-container"></span> </div>
+            <br>
+
+            <div class="jnkrpp-about__code-container--out">
+                <p class="jnkrpp-about__code-container--title">Kod:</p>
+                <div class="jnkrpp-about__code-container--inside">
+               <pre class="prettyprint">
+function findLastWord(str) {
+    var splitedVerse = str.split(" ");
+    var last = splitedVerse.length - 1;
+    return splitedVerse[last];
+}
+</pre>
+                </div>
+            </div>
+
+            <br>
+            <br>
+
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 2:</strong> Jak określić liczbę sylab w słowie?</h3>
+            <div class="jnkrpp-about__problem-desc">OK, mamy ostatnie słowo. Która część tego słowa stanowi przestrzeń rymową (obszar współdźwięczności, czyli po prostu obszar, który ma się rymować)? Oczywiste jest, że nie całość słowa, ponieważ wtedy mówilibyśmy o rymach <strong>tautologicznych</strong> (para <strong>zdrowie</strong> - <strong>zdrowie</strong> nie jest rymem, bo jest fonetycznie dokładnie taka sama).
+                <br>
+                <br> Przestrzeń rymową stanowi jakaś końcowa część słowa. Ta część jest w różnych słowach zmienna - zależy od akcentu, ponieważ <strong>obejmuje samogłoskę akcentowaną i wszystkie głoski po niej następujące</strong>. Przestrzeń rymową mogą stanowić zatem np. następujące ciągi znaków (zaznaczone podkreśleniem): <em>dn<u>o</u></em>, <em>d<u>om</u></em>, <em>R<u>adom</u></em>, <em>trag<u>edia</u></em>, <em>f<u>izyka</u></em>, itd. Aby określić przestrzeń rymową, musimy znać liczbę sylab w słowie. Jak ją policzyć?
+                <br>
+                <br> Po pierwsze, musimy wiedzieć, że ośrodkiem sylaby mogą być wyłącznie samogłoski (wyłącznie samogłoski mogą być <strong>zgłoskotwórcze</strong>). Operacja przeliczenia samogłosek (a, e, i, o, u, y, ą, ę) jednak nie wystarczy, ponieważ nie wszystkie samogłoski w słowie pełnią funkcję zgłoskotwórczą. Problematyczna jest głoska „i”, która może pełnić 1) tylko funkcję zmiękczającą lub 2) funkcje zmiękczającą i zgłoskotwórczą, np.: <em>kwitek</em> (2), <em>kwiatek</em> (1), <em>wariat</em> (1), <em>diariusz</em> (1). Zauważmy, że wszystkie wymienione słowa są <strong>dwusylabowe</strong>, a jednak ich liczba samogłosek jest różna - to odpowiednio: <strong>2, 3, 3, 4</strong>.
+                <br>
+                <br> Trzeba więc znaleźć warunki, w których „i” nie pełni funkcji zgłoskotwórczej. Samogłoska „i” nie jest zgłoskotwórcze wtedy, kiedy inna samogłoska pełni tę funkcję, a więc wtedy, kiedy występuje w jednej z następujących konfiguracji: ia, ie, ii, io, iu, ią, ię.
+                <br>
+                <br> Żeby obliczyć liczbę sylab w słowie, musimy zatem zliczyć wszystkie samogłoski i odjąć liczbę wystąpień każdej konfiguracji: ia, ie, ii, io, iu, ią, ię:
+            </div>
+            <br>
+            <input class="jnkrpp-about__input" id="second-problem" type=text size=33 value="pieniądze">
+            <button class="jnkrpp-about__button" onclick="secondStepFunction()">Kliknij</button>
+            <br>
+            <br>
+            <div id="second-problem-result"><strong>Liczba sylab = </strong><span id="second-problem-container"></span> </div>
+            <br>
+
+            <div class="jnkrpp-about__code-container--out">
+                <p class="jnkrpp-about__code-container--title">Kod:</p>
+                <div class="jnkrpp-about__code-container--inside">
+                <pre class="prettyprint">
+//vowel or consonant check - auxiliary function
+var isVowelCheck = function(letter) {
+        var vowels = ["a", "e", "i", "o", "u", "y", "ą", "ę"];
+        return vowels.includes(letter);
+    }
+    //count syllables in a verse;
+function countSyllables(str) {
+    var splittedPhrase = str.split("");
+    var numberOfSyllables = 0;
+    for (var i = splittedPhrase.length - 1; i >= 0; i--) {
+        if (isVowelCheck(splittedPhrase[i]) == true) {
+            numberOfSyllables += 1;
+        }
+    }
+    if (str.length > str.replace(/ia/g, "").length) {
+        var x = str.length - str.replace(/ia/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/ie/g, "").length) {
+        var x = str.length - str.replace(/ie/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/ii/g, "").length) {
+        var x = str.length - str.replace(/ii/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/io/g, "").length) {
+        var x = str.length - str.replace(/io/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/iu/g, "").length) {
+        var x = str.length - str.replace(/iu/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/iy/g, "").length) {
+        var x = str.length - str.replace(/iy/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/ią/g, "").length) {
+        var x = str.length - str.replace(/ią/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    if (str.length > str.replace(/ię/g, "").length) {
+        var x = str.length - str.replace(/ię/g, "").length;
+        numberOfSyllables = numberOfSyllables - x / 2;
+    }
+    return numberOfSyllables;
+}
+</pre>
+                </div>
+            </div>
+            <br>
+            <br>
+
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 3:</strong> Jak określić typ rymu?</h3>
+            <div class="jnkrpp-about__problem-desc">Powiedzieliśmy już, że rym związany jest z akcentem. Dla języka polskiego charakterystyczny jest akcent paroksytoniczny (na 2. sylabę od końca); akcent oksytoniczny (na ostatnią sylabę) dotyczy natomiast przede wszystkim wyrazów jednosylabowych.
+                <br>
+                <br> Ze względu na rodzaj występującego w rymie akcentu, wyróżniamy <strong>rymy męskie</strong> (albo: oksytoniczne) i <strong>rymy żeńskie</strong> (albo: paroksytoniczne). Warto wiedzieć, że istnieją również rymy głębsze - <strong>daktyliczne</strong> (albo: proparoksytoniczne), czyli obejmujące obszar od 3. sylaby od końca. Zazwyczaj (choć nie tylko) wiążą się one ze słowami zapożyczonymi, akcentowanymi na 3. sylabę od końca (np. <em><u>fi</u>zyka</em>, <em>mate<u>ma</u>tyka</em>). Wykrycie rymów proparoksytonicznych wymagałoby dołączenia słownika zawierającego listę leksykalnych rdzeni wyrazów akcentowanych proparoksytonicznie (a także m.in. zakończeń czasowników w 1. i 2. os. l. mn. czasu przeszłego (<em>-liśmy</em>, <em>-liście</em>, <em>-łyśmy</em>, <em>-łyście</em>), ponieważ formy: <em>zro<u>bi</u>liśmy, zro<u>bi</u>liście</em> itd. również akcentujemy proparoksytonicznie), więc ten problem na razie pomińmy.
+                <br>
+                <br> Wróćmy do rymów męskich i żeńskich. W sposób <strong>męski</strong> mogą się rymować słowa, które zawierają albo jedną samogłoskę, albo dwie samogłoski, jeśli jedna z samogłosek nie jest zgłoskotwórcza. W sposób <strong>żeński</strong> mogą się rymować słowa, które nie rymują się w sposób męski (czyli te, które nie spełniają ww. warunku).
+
+            </div>
+            <br>
+            <input class="jnkrpp-about__input" id="third-problem" type=text size=33 value="pieniądze">
+            <button class="jnkrpp-about__button" onclick="thirdStepFunction()">Kliknij</button>
+            <br>
+            <br>
+            <div id="third-problem-result"><strong>Typ rymu = </strong><span id="third-problem-container"></span> </div>
+            <br>
+
+            <div class="jnkrpp-about__code-container--out">
+                <p class="jnkrpp-about__code-container--title">Kod:</p>
+                <div class="jnkrpp-about__code-container--inside">
+                <pre class="prettyprint">
+//return rhyme type: oxytone
+function isOxytone(phrase) {
+    var lastWord = findLastWord(phrase);
+    if (countVowels(lastWord) == 1) {
+        return true;
+    } else if (countVowels(lastWord) == 2 && canVowelMakeSyllable(lastWord) == 0) {
+        return true;
+    } else {
+        return false;
+    }
+}
+</pre>
+                </div>
+            </div>
+
+            <br>
+            <br>
+<div id="jnkrpp-about__see-more">
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 4:</strong> Jak wyznaczyć przestrzeń rymową?</h3>
+            <p>... TODO ...</p>
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 5:</strong> Jak wykryć wyraz enklityczny?</h3>
+            <p>... TODO ...</p>
+
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 6:</strong> Jak znaleźć wszystkie warianty homofoniczne (fonetycznie tożsame)?</h3>
+            <p>... TODO ...</p>
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 7:</strong> Dyftongizacja monoftongów ą ę</h3>
+            <p>... TODO ...</p>
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 8:</strong> Ubezdźwięcznienie wygłosu</h3>
+            <p>... TODO ...</p>
+            <h3 class="jnkrpp-about__step-no"><strong>Krok 9:</strong> Jak wykryć rym proparoksytoniczny?</h3>
+            <p>... TODO ...</p>
+           <!-- <h3 class="jnkrpp-about__step-no"><strong>Krok 10:</strong> C. K. Norwid: „Rym?... We wnętrzu leży, nie w końcach wierszy, |
+Jak i gwiazdy nie tam są, gdzie świecą!”</h3>
+            <p>... TODO ...</p> -->
+            
+</div>
+<button class="jnkrpp-button" id="jnkrpp-button__see-more" onclick="jnkrppSeeMore()">Czytaj dalej</button>
+        </div>
+         </div>
+        <div class="jnkrpp-footer"><br><br><p>©2019 M.W.</p></div>
+
+   
+
+    <script>
+        //trim inputtedText
+        var trimText = function(inputtedText) {
+            var trimmedText = inputtedText.trim();
+            return trimmedText;
+        }
+
+        //vowel or consonant check - auxiliary function
+        var isVowelCheck = function(letter) {
+            var vowels = ["a", "e", "i", "o", "u", "y", "ą", "ę"];
+            return vowels.includes(letter);
+        }
+
+        var clearMsgBox = function() {
+            document.getElementById("errorMsg").innerHTML = "";
+        }
+
+        function displayError(errorText) {
+            document.getElementById("errorMsg").innerHTML = errorText;
+        }
+
+        function validate(str) {
+            if (inputFilledOutCheck(str) && wordContainsVowelsCheck(str)) {
+                return true;
+            }
+            return false;
+        }
+
+        function inputFilledOutCheck(str) {
+            if (str === "") {
+                displayError("Pole nie może być puste.");
+                return false;
+            }
+            return true;
+        }
+        //validator - last word is invalid: does not contain vowels
+        function wordContainsVowelsCheck(str) {
+            var lastWord = findLastWord(str);
+            if (countVowels(lastWord) == 0) {
+                displayError("Błędny ciąg znaków oraz/lub ostatnie słowo nie zawiera samogłosek.");
+                return false;
+            }
+            return true;
+        }
+
+        //count vowels and find its positions <TODO> 
+        var countVowels = function(lastWord) {
+            var splittedWord = lastWord.split("");
+            var numberOfVowels = 0;
+            for (var i = splittedWord.length - 1; i >= 0; i--) {
+                if (isVowelCheck(splittedWord[i]) == true) {
+                    numberOfVowels += 1;
+                }
+            }
+            return numberOfVowels;
+        }
+
+        //check if the vowel "i" can make a syllable - auxiliary function - use ONLY for oxytone rhymes check 
+        var canVowelMakeSyllable = function(combinationOfLetters) {
+            var cannotMakeSyllable = ["ia", "ie", "ii", "io", "iu", "ią", "ię"];
+
+            for (var i = 0; i < cannotMakeSyllable.length; i++) {
+                if (combinationOfLetters.includes(cannotMakeSyllable[i]) == true) {
+
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        //find last word of the input text
+        function findLastWord(str) {
+            var splitedVerse = str.split(" ");
+            var last = splitedVerse.length - 1;
+            return splitedVerse[last];
+        }
+
+        //find last letter of the last word
+        function findLastLetter(str) {
+            var splitedVerse = str.split(" ");
+            var lastWord = splitedVerse[splitedVerse.length - 1];
+            var lastLetter = lastWord.slice(-1);
+
+            document.getElementById("lastLetter").innerHTML = lastLetter;
+            return lastLetter;
+        }
+
+        //return rhyme type: oxytone
+        function isOxytone(phrase) {
+            var lastWord = findLastWord(phrase);
+            if (countVowels(lastWord) == 1) {
+                return true;
+            } else if (countVowels(lastWord) == 2 && canVowelMakeSyllable(lastWord) == 0) {
+                return true;
+            } else {
+                return false;
+            }
+        }
+
+        //paroxytone or oxytone translation
+        function isParoxytoneButton(str) {
+            if (isOxytone(str)) {
+                document.getElementById("paroxytone").innerHTML = "rym męski";
+            } else {
+                document.getElementById("paroxytone").innerHTML = "rym żeński";
+            }
+        }
+
+        //count syllables in a verse;
+        function countSyllables(str) {
+            var splittedPhrase = str.split("");
+            var numberOfSyllables = 0;
+            for (var i = splittedPhrase.length - 1; i >= 0; i--) {
+                if (isVowelCheck(splittedPhrase[i]) == true) {
+                    numberOfSyllables += 1;
+                }
+            }
+
+            if (str.length > str.replace(/ia/g, "").length) {
+                var x = str.length - str.replace(/ia/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/ie/g, "").length) {
+                var x = str.length - str.replace(/ie/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/ii/g, "").length) {
+                var x = str.length - str.replace(/ii/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/io/g, "").length) {
+                var x = str.length - str.replace(/io/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/iu/g, "").length) {
+                var x = str.length - str.replace(/iu/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/iy/g, "").length) {
+                var x = str.length - str.replace(/iy/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/ią/g, "").length) {
+                var x = str.length - str.replace(/ią/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            if (str.length > str.replace(/ię/g, "").length) {
+                var x = str.length - str.replace(/ię/g, "").length;
+                numberOfSyllables = numberOfSyllables - x / 2;
+            }
+            console.log(numberOfSyllables);
+            return numberOfSyllables;
+
+        }
+
+        //lastAccent translation
+        var lastAccentTranslation = function(str) {
+            if (isOxytone(str)) {
+                document.getElementById("lastAccent").innerHTML = "oksytoniczny";
+            } else {
+                document.getElementById("lastAccent").innerHTML = "paroksytoniczny";
+            }
+        }
+
+        ///////////////////////////////////////
+        ///////////////////////////////////////
+
+        //summary functions
+        var summaryFunctions = function() {
+            clearMsgBox();
+            
+            var inputtedText = document.getElementById("verse").value;
+            inputtedText = inputtedText.toLowerCase();
+            var trimmed = trimText(inputtedText);
+            clearMsgBox();
+            if (validate(trimmed) == false) {
+            clearResult();
+                return false;
+            } else {
+            
+            displayResult();
+                var lastWord = findLastWord(trimmed);
+                document.getElementById("lastWord").innerHTML = lastWord;
+                //findLastLetter(trimmed);
+                isParoxytoneButton(trimmed);
+                lastAccentTranslation(trimmed);
+                var numberOfSyllables = countSyllables(trimmed);
+                document.getElementById("countSyllables").innerHTML = numberOfSyllables + "-zgłoskowiec";
+                //findRhymeArea();
+
+            }
+        }
+
+        /////////////////////////////////////
+
+        //FIRST STEP FUNCTION
+        var firstStepFunction = function() {
+            var inputtedText = document.getElementById("first-problem").value;
+            inputtedText = inputtedText.toLowerCase();
+            var trimmed = trimText(inputtedText);
+            var lastWord = findLastWord(trimmed);
+            document.getElementById("first-problem-container").innerHTML = lastWord;
+        }
+
+        //SECOND STEP FUNCTION
+        var secondStepFunction = function() {
+                var inputtedText = document.getElementById("second-problem").value;
+                inputtedText = inputtedText.toLowerCase();
+                var trimmed = trimText(inputtedText);
+                var numberOfSyllables = countSyllables(trimmed);
+                document.getElementById("second-problem-container").innerHTML = numberOfSyllables;
+            }
+            //THIRD STEP FUNCTION
+        var thirdStepFunction = function() {
+                var inputtedText = document.getElementById("third-problem").value;
+                inputtedText = inputtedText.toLowerCase();
+                var trimmed = trimText(inputtedText);
+                isParoxytoneStep3(trimmed);
+            }
+            //THIRD STEP AUXILIARY FUNCTION
+        function isParoxytoneStep3(str) {
+            if (isOxytone(str)) {
+                document.getElementById("third-problem-container").innerHTML = "rym męski";
+            } else {
+                document.getElementById("third-problem-container").innerHTML = "rym żeński";
+            }
+        }
+
+        //var countSyllables = function () {
+        //var inputtedText = document.getElementById("verse").value;
+        //countVowels(inputtedText);
+        //if (numberOfVowels 
+        // }
+
+        //find a rhyme area
+        
+        //display the result function
+        
+        function displayResult(){
+        
+        document.getElementById("jnkrpp-analizator__result-box").style.display="block";
+        }
+        
+         //clear the result function
+         function clearResult() {
+          document.getElementById("jnkrpp-analizator__result-box").style.display="none";
+        }
+        
+        
+        
+        //lazy loading on click - see more
+        function jnkrppSeeMore(){
+        document.getElementById("jnkrpp-about__see-more").style.display="block";
+        document.getElementById("jnkrpp-button__see-more").style.display="none";
+        }
+        
+       
+        
+        
+        
+
+        //sticky navbar below  
+window.onload= function() {
+        function myFunctionStickyScroll() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("jnkrpp-sticky")
+            } else {
+                navbar.classList.remove("jnkrpp-sticky");
+            }
+        }
+        var navbar = document.getElementById("jnkrpp-navbar");
+        var sticky = navbar.offsetTop;
+        console.log(sticky);
+
+        // When the user scrolls down 100px from the top of the document, show the button
+        window.onscroll = function() {
+            myFunctionStickyScroll();
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                document.getElementById("jnkrpp-myBtnScrollingTop").style.display = "block";
+            } else {
+                document.getElementById("jnkrpp-myBtnScrollingTop").style.display = "none";
+            }
+        }
+}
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
+</body>
+
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
