@@ -63,6 +63,255 @@ width:85% !important;
   background-color: #514f4f !important;
   }
 
+    
+    /* CSS styles converted online from SCSS: https://jankochanowski.github.io/style.scss */
+
+/*CHANGES: @media screen - min-width for .jnkrpp-backgr */
+
+body,
+html {
+  margin: 0;
+  font-family: monospace;
+  background-color: #f5f5f5;
+  overflow-x: hidden;
+  line-height: 1.7;
+}
+
+.jnkrpp-backgr, .jnkrpp-forBg {
+  width: 100%;
+  display: block;
+  margin: auto;
+  background-color: white;
+}
+
+
+@media screen and (min-width: 800px) {
+.jnkrpp-backgr {
+width:65%;
+}
+}
+
+
+.jnkrpp-tooltip {
+  position: relative;
+  display: inline;
+  border-bottom: 1px dotted black;
+}
+.jnkrpp-tooltip .jnkrpp-tooltiptext {
+  visibility: hidden;
+  font-size: 11px;
+  width: 230px;
+  background-color: #eaded6;
+  opacity: 0.94;
+  color: black;
+  text-align: center;
+  border-radius: 6px;
+  padding: 5px 5px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* Position the tooltip */
+  position: absolute;
+}
+
+.jnkrpp-tooltip:hover .jnkrpp-tooltiptext {
+  visibility: visible;
+}
+
+#jnkrpp-navbar {
+  overflow: hidden;
+  background-color: #333;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  z-index: 100;
+  opacity: 0.91;
+}
+#jnkrpp-navbar a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 12px 15px;
+  text-decoration: none;
+  font-size: 14px;
+}
+#jnkrpp-navbar a:hover {
+  background-color: #ddd;
+  color: black;
+  /* border-bottom: $lightgrey solid 1px; */
+}
+#jnkrpp-navbar a.active {
+  background-color: #ddd;
+  color: #333;
+  border-left: #333 solid 5px;
+  /* border-bottom: $lightgrey solid 0px;*/
+}
+
+.jnkrpp-sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.jnkrpp-sticky + .content {
+  padding-top: 60px;
+}
+
+.jnkrpp-hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 2px solid #383838;
+  margin: auto;
+  padding: 0;
+  width: 20%;
+}
+
+#jnkrpp-myBtnScrollingTop {
+  display: none;
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  z-index: 99;
+  font-size: 18px;
+  border: none;
+  outline: none;
+  background-color: #333;
+  color: white;
+  cursor: pointer;
+  padding-left: 10px;
+  padding-right: 10px;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  opacity: 0.91;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+#jnkrpp-myBtnScrollingTop:hover {
+  background-color: #555;
+}
+
+.jnkrpp-button {
+  background-color: white;
+  color: black;
+  border-radius: 6px;
+  border: 1px solid #555555;
+  padding: 12px 32px;
+  text-align: center;
+  font-family: monospace;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  -webkit-transition-duration: 0.4s;
+  /* Safari */
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.jnkrpp-button:hover {
+  background-color: #555555;
+  color: white;
+}
+
+#errorMsg {
+  color: red;
+  font-style: italic;
+}
+
+.all-content, .jnkrpp-analizator, .jnkrpp-about {
+  margin-left: 40px;
+  margin-right: 40px;
+}
+
+.jnkrpp-content {
+  padding: 16px;
+}
+
+.jnkrpp-about__problem-desc {
+  text-align: justify;
+}
+
+.jnkrpp-about__subtitle, .jnkrpp-analizator__subtitle {
+  font-size: 18px;
+  text-align: center;
+}
+
+.jnkrpp-analizator__engine {
+  margin: auto;
+  max-width: 600px;
+  border-radius: 10px;
+  text-align: center;
+  padding: 10px;
+  background-color: #eaded6;
+  background-image: linear-gradient(to bottom right, #eaded6, #f8f5f2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  resize: vertical;
+  resize: horizontal;
+}
+
+.jnkrpp-analizator__input {
+  width: 90%;
+  max-width: 300px;
+  margin: auto;
+  justify: center;
+  box-sizing: border-box;
+  resize: vertical;
+}
+
+#jnkrpp-analizator__result-box {
+  display: none;
+}
+
+.jnkrpp-about__code-container--out {
+  max-width: 450px;
+  padding: 10px;
+  background-color: #eaded6;
+  background-image: linear-gradient(to bottom right, #eaded6, #f8f5f2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.jnkrpp-about__code-container--inside {
+  border: 10px;
+  background-color: white;
+  padding: 10px;
+  border-left: 10px solid #333;
+  height: 100px;
+  overflow-y: auto;
+}
+
+.jnkrpp-about__code-container--title {
+  font-size: 18px;
+}
+
+.jnkrpp-about__button {
+  background-color: #eaded6;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+.jnkrpp-about__input {
+  padding: 2px;
+}
+
+#jnkrpp-about__see-more {
+  display: none;
+}
+
+#jnkrpp-button__see-more {
+  margin: auto;
+  display: block;
+}
+
+.jnkrpp-footer {
+  background-color: white;
+  text-align: center;
+  font-family: monospace;
+  padding: 15px;
+}
+
+
+    
+    
+    
+    
+    
 </style>
    
 </head>
