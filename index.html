@@ -5,324 +5,320 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Jak nauczyć komputer rymować po polsku</title>
-<link rel="stylesheet" type="text/css" href="https://jankochanowski.github.io/style.css">
-<script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
-<style>
-
-@font-face {
-            font-family: 'Foncik';
+    <link rel="stylesheet" type="text/css" href="https://jankochanowski.github.io/style.css">
+    <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+    <style>
+        @font-face {
+            font-family: 'Roboto', sans-serif;
             font-style: normal;
             font-weight: normal;
             src: url('http://jankochanowski.github.io/rymidlo/Roboto-Light.ttf');
         }
-
-
-.prettyprint {
-border: none !important;
-margin-top:0px !important;}
-
-body, html {
-max-width:900px;
-margin:auto !important;
-    overflow-x: visible !important;
-background-color: white !important;
-}
-.jnkrpp-content{
-background-color:white;
-}
-
-.jnkrpp-sticky {
-max-width:900px;
-margin:auto;
-}
-
-.jnkrpp-footer {
-  background-color:#f5f5f5 !important;
- 
-}
-#jnkrpp-navbar {
-background-color:#514f4f !important;}
-
-@media screen and (min-width: 890px){
-#jnkrpp-navbar {
-background-color:#514f4f !important;
-/*#ddd*/
-/*background-image: linear-gradient(to bottom right, #514f4f, #7a7777);
-
-
+        
+        .prettyprint {
+            border: none !important;
+            margin-top: 0px !important;
+        }
+        
+        body,
+        html {
+            max-width: 900px;
+            margin: auto !important;
+            overflow-x: visible !important;
+            background-color: white !important;
+        }
+        
+        .jnkrpp-content {
+            background-color: white;
+        }
+        
+        .jnkrpp-sticky {
+            max-width: 900px;
+            margin: auto;
+        }
+        
+        .jnkrpp-footer {
+            background-color: #f5f5f5 !important;
+        }
+        
+        #jnkrpp-navbar {
+            background-color: #514f4f !important;
+        }
+        
+        @media screen and (min-width: 890px) {
+            #jnkrpp-navbar {
+                background-color: #514f4f !important;
+                /*#ddd*/
+                /*background-image: linear-gradient(to bottom right, #514f4f, #7a7777);
 
 background: linear-gradient(-70deg, rgba(0, 0, 0, 0) 30%, #514f4f 30%), url( "https://jankochanowski.github.io/kk8.png");*/
-}}
+            }
+        }
+        
+        @media screen and (min-width: 800px) {
+            .jnkrpp-backgr {
+                width: 85% !important;
+            }
+        }
+        
+        #jnkrpp-navbar a.active {
+            border-left: #514f4f solid 5px !important;
+        }
+        
+        #jnkrpp-myBtnScrollingTop {
+            background-color: #514f4f !important;
+        }
+        /* CSS styles converted online from SCSS: https://jankochanowski.github.io/style.scss */
+        /*CHANGES: @media screen - min-width for .jnkrpp-backgr */
+        
+        body,
+        html {
+            margin: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f5f5f5;
+            overflow-x: hidden;
+            line-height: 1.7;
+        }
+        
+        .jnkrpp-backgr,
+        .jnkrpp-forBg {
+            width: 100%;
+            display: block;
+            margin: auto;
+            background-color: white;
+        }
+        
+        @media screen and (min-width: 800px) {
+            .jnkrpp-backgr {
+                width: 65%;
+            }
+        }
+        
+        .jnkrpp-tooltip {
+            position: relative;
+            display: inline;
+            border-bottom: 1px dotted black;
+        }
+        
+        .jnkrpp-tooltip .jnkrpp-tooltiptext {
+            visibility: hidden;
+            font-size: 11px;
+            width: 230px;
+            background-color: #eaded6;
+            opacity: 0.94;
+            color: black;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 5px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /* Position the tooltip */
+            position: absolute;
+        }
+        
+        .jnkrpp-tooltip:hover .jnkrpp-tooltiptext {
+            visibility: visible;
+        }
+        
+        #jnkrpp-navbar {
+            overflow: hidden;
+            background-color: #333;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            z-index: 100;
+            opacity: 0.91;
+        }
+        
+        #jnkrpp-navbar a {
+            float: left;
+            display: block;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 12px 15px;
+            text-decoration: none;
+            font-size: 14px;
+        }
+        
+        #jnkrpp-navbar a:hover {
+            background-color: #ddd;
+            color: black;
+            /* border-bottom: $lightgrey solid 1px; */
+        }
+        
+        #jnkrpp-navbar a.active {
+            background-color: #ddd;
+            color: #333;
+            border-left: #333 solid 5px;
+            /* border-bottom: $lightgrey solid 0px;*/
+        }
+        
+        .jnkrpp-sticky {
+            position: fixed;
+            top: 0;
+            width: 100%;
+        }
+        
+        .jnkrpp-sticky + .content {
+            padding-top: 60px;
+        }
+        
+        .jnkrpp-hr {
+            display: block;
+            height: 1px;
+            border: 0;
+            border-top: 2px solid #383838;
+            margin: auto;
+            padding: 0;
+            width: 20%;
+        }
+        
+        #jnkrpp-myBtnScrollingTop {
+            display: none;
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #333;
+            color: white;
+            cursor: pointer;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 8px;
+            padding-bottom: 8px;
+            border-radius: 4px;
+            opacity: 0.91;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        #jnkrpp-myBtnScrollingTop:hover {
+            background-color: #555;
+        }
+        
+        .jnkrpp-button {
+            background-color: white;
+            color: black;
+            border-radius: 6px;
+            border: 1px solid #555555;
+            padding: 12px 32px;
+            text-align: center;
+            font-family: monospace;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            -webkit-transition-duration: 0.4s;
+            /* Safari */
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        
+        .jnkrpp-button:hover {
+            background-color: #555555;
+            color: white;
+        }
+        
+        #errorMsg {
+            color: red;
+            font-style: italic;
+        }
+        
+        .all-content,
+        .jnkrpp-analizator,
+        .jnkrpp-about {
+            margin-left: 40px;
+            margin-right: 40px;
+        }
+        
+        .jnkrpp-content {
+            padding: 16px;
+        }
+        
+        .jnkrpp-about__problem-desc {
+            text-align: justify;
+        }
+        
+        .jnkrpp-about__subtitle,
+        .jnkrpp-analizator__subtitle {
+            font-size: 18px;
+            text-align: center;
+        }
+        
+        .jnkrpp-analizator__engine {
+            margin: auto;
+            max-width: 600px;
+            border-radius: 10px;
+            text-align: center;
+            padding: 10px;
+            background-color: #eaded6;
+            background-image: linear-gradient(to bottom right, #eaded6, #f8f5f2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            resize: vertical;
+            resize: horizontal;
+        }
+        
+        .jnkrpp-analizator__input {
+            width: 90%;
+            max-width: 300px;
+            margin: auto;
+            justify: center;
+            box-sizing: border-box;
+            resize: vertical;
+        }
+        
+        #jnkrpp-analizator__result-box {
+            display: none;
+        }
+        
+        .jnkrpp-about__code-container--out {
+            max-width: 450px;
+            padding: 10px;
+            background-color: #eaded6;
+            background-image: linear-gradient(to bottom right, #eaded6, #f8f5f2);
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+        
+        .jnkrpp-about__code-container--inside {
+            border: 10px;
+            background-color: white;
+            padding: 10px;
+            border-left: 10px solid #333;
+            height: 100px;
+            overflow-y: auto;
+        }
+        
+        .jnkrpp-about__code-container--title {
+            font-size: 18px;
+        }
+        
+        .jnkrpp-about__button {
+            background-color: #eaded6;
+            padding-left: 8px;
+            padding-right: 8px;
+        }
+        
+        .jnkrpp-about__input {
+            padding: 2px;
+        }
+        
+        #jnkrpp-about__see-more {
+            display: none;
+        }
+        
+        #jnkrpp-button__see-more {
+            margin: auto;
+            display: block;
+        }
+        
+        .jnkrpp-footer {
+            background-color: white;
+            text-align: center;
+            font-family: monospace;
+            padding: 15px;
+        }
+    </style>
 
-@media screen and (min-width: 800px) {
-.jnkrpp-backgr {
-width:85% !important;
-}
-}
-
-#jnkrpp-navbar a.active {
- 
-  border-left: #514f4f solid 5px !important;
-
-}
-
-
-#jnkrpp-myBtnScrollingTop {
-
-  background-color: #514f4f !important;
-  }
-
-    
-    /* CSS styles converted online from SCSS: https://jankochanowski.github.io/style.scss */
-
-/*CHANGES: @media screen - min-width for .jnkrpp-backgr */
-
-body,
-html {
-  margin: 0;
-  font-family: 'Foncik';
-  background-color: #f5f5f5;
-  overflow-x: hidden;
-  line-height: 1.7;
-}
-
-.jnkrpp-backgr, .jnkrpp-forBg {
-  width: 100%;
-  display: block;
-  margin: auto;
-  background-color: white;
-}
-
-
-@media screen and (min-width: 800px) {
-.jnkrpp-backgr {
-width:65%;
-}
-}
-
-
-.jnkrpp-tooltip {
-  position: relative;
-  display: inline;
-  border-bottom: 1px dotted black;
-}
-.jnkrpp-tooltip .jnkrpp-tooltiptext {
-  visibility: hidden;
-  font-size: 11px;
-  width: 230px;
-  background-color: #eaded6;
-  opacity: 0.94;
-  color: black;
-  text-align: center;
-  border-radius: 6px;
-  padding: 5px 5px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  /* Position the tooltip */
-  position: absolute;
-}
-
-.jnkrpp-tooltip:hover .jnkrpp-tooltiptext {
-  visibility: visible;
-}
-
-#jnkrpp-navbar {
-  overflow: hidden;
-  background-color: #333;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  z-index: 100;
-  opacity: 0.91;
-}
-#jnkrpp-navbar a {
-  float: left;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 12px 15px;
-  text-decoration: none;
-  font-size: 14px;
-}
-#jnkrpp-navbar a:hover {
-  background-color: #ddd;
-  color: black;
-  /* border-bottom: $lightgrey solid 1px; */
-}
-#jnkrpp-navbar a.active {
-  background-color: #ddd;
-  color: #333;
-  border-left: #333 solid 5px;
-  /* border-bottom: $lightgrey solid 0px;*/
-}
-
-.jnkrpp-sticky {
-  position: fixed;
-  top: 0;
-  width: 100%;
-}
-
-.jnkrpp-sticky + .content {
-  padding-top: 60px;
-}
-
-.jnkrpp-hr {
-  display: block;
-  height: 1px;
-  border: 0;
-  border-top: 2px solid #383838;
-  margin: auto;
-  padding: 0;
-  width: 20%;
-}
-
-#jnkrpp-myBtnScrollingTop {
-  display: none;
-  position: fixed;
-  bottom: 25px;
-  right: 25px;
-  z-index: 99;
-  font-size: 18px;
-  border: none;
-  outline: none;
-  background-color: #333;
-  color: white;
-  cursor: pointer;
-  padding-left: 10px;
-  padding-right: 10px;
-  padding-top: 8px;
-  padding-bottom: 8px;
-  border-radius: 4px;
-  opacity: 0.91;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-#jnkrpp-myBtnScrollingTop:hover {
-  background-color: #555;
-}
-
-.jnkrpp-button {
-  background-color: white;
-  color: black;
-  border-radius: 6px;
-  border: 1px solid #555555;
-  padding: 12px 32px;
-  text-align: center;
-  font-family: 'Foncik';
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  -webkit-transition-duration: 0.4s;
-  /* Safari */
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.jnkrpp-button:hover {
-  background-color: #555555;
-  color: white;
-}
-
-#errorMsg {
-  color: red;
-  font-style: italic;
-}
-
-.all-content, .jnkrpp-analizator, .jnkrpp-about {
-  margin-left: 40px;
-  margin-right: 40px;
-}
-
-.jnkrpp-content {
-  padding: 16px;
-}
-
-.jnkrpp-about__problem-desc {
-  text-align: justify;
-}
-
-.jnkrpp-about__subtitle, .jnkrpp-analizator__subtitle {
-  font-size: 18px;
-  text-align: center;
-}
-
-.jnkrpp-analizator__engine {
-  margin: auto;
-  max-width: 600px;
-  border-radius: 10px;
-  text-align: center;
-  padding: 10px;
-  background-color: #eaded6;
-  background-image: linear-gradient(to bottom right, #eaded6, #f8f5f2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  resize: vertical;
-  resize: horizontal;
-}
-
-.jnkrpp-analizator__input {
-  width: 90%;
-  max-width: 300px;
-  margin: auto;
-  justify: center;
-  box-sizing: border-box;
-  resize: vertical;
-}
-
-#jnkrpp-analizator__result-box {
-  display: none;
-}
-
-.jnkrpp-about__code-container--out {
-  max-width: 450px;
-  padding: 10px;
-  background-color: #eaded6;
-  background-image: linear-gradient(to bottom right, #eaded6, #f8f5f2);
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-}
-
-.jnkrpp-about__code-container--inside {
-  border: 10px;
-  background-color: white;
-  padding: 10px;
-  border-left: 10px solid #333;
-  height: 100px;
-  overflow-y: auto;
-}
-
-.jnkrpp-about__code-container--title {
-  font-size: 18px;
-}
-
-.jnkrpp-about__button {
-  background-color: #eaded6;
-  padding-left: 8px;
-  padding-right: 8px;
-}
-
-.jnkrpp-about__input {
-  padding: 2px;
-}
-
-#jnkrpp-about__see-more {
-  display: none;
-}
-
-#jnkrpp-button__see-more {
-  margin: auto;
-  display: block;
-}
-
-.jnkrpp-footer {
-  background-color: white;
-  text-align: center;
-  font-family: 'Foncik';
-  padding: 15px;
-}
-
-
-    
-    
-    
-    
-    
-</style>
-   
 </head>
 
 <body>
@@ -344,73 +340,71 @@ width:65%;
             <br>
             <h2 class="jnkrpp-analizator__subtitle">Analizator - wersja testowa</h2>
             <div class="jnkrpp-analizator__engine">
-           
 
-            <p> 
-            
-            Wprowadź wartość i kliknij <strong>Analiza</strong>:</p>
+                <p>
 
-            <input class="jnkrpp-analizator__input" id="verse" type=text  value="Kupić by cię, mądrości, za drogie pieniądze">
-           
-            <p id="errorMsg"></p>
+                    Wprowadź wartość i kliknij <strong>Analiza</strong>:</p>
 
-            <button class="jnkrpp-button" onclick="summaryFunctions()">Analiza</button>
-            <!-- div engine close below-->
+                <input class="jnkrpp-analizator__input" id="verse" type=text value="Kupić by cię, mądrości, za drogie pieniądze">
+
+                <p id="errorMsg"></p>
+
+                <button class="jnkrpp-button" onclick="summaryFunctions()">Analiza</button>
+                <!-- div engine close below-->
             </div>
-           
-<br>
-<div id="jnkrpp-analizator__result-box">
-            <p><strong>Wynik analizy:</strong></p>
 
-            <table>
-                <tr>
-                    <td>Ostatnie słowo</td>
-                    <td> = </td>
-                    <td><span id="lastWord"></span></td>
-                </tr>
-                <tr>
-                    <td>Miejsce ostatniego akcentu</td>
-                    <td> = </td>
-                    <td><span id="lastAccent"></span></td>
-                </tr>
-                <tr>
-                    <td>Typ rymu</td>
-                    <td> = </td>
-                    <td><span id="paroxytone"></span></td>
-                </tr>
-                <tr>
-                    <td>Metrum wiersza</td>
-                    <td> = </td>
-                    <td><span id="countSyllables"></span></td>
-                </tr>
-                <tr>
-                    <td>findRhymeArea()</td>
-                    <td> = </td>
-                    <td><span id="findRhymeArea"></span></td>
-                </tr>
-                <tr>
-                    <td>Warianty homofoniczne</td>
-                    <td> = </td>
-                    <td><span id="homophonicElements"></span></td>
-                </tr>
+            <br>
+            <div id="jnkrpp-analizator__result-box">
+                <p><strong>Wynik analizy:</strong></p>
 
-            </table>
-          
-            
+                <table>
+                    <tr>
+                        <td>Ostatnie słowo</td>
+                        <td> = </td>
+                        <td><span id="lastWord"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Miejsce ostatniego akcentu</td>
+                        <td> = </td>
+                        <td><span id="lastAccent"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Typ rymu</td>
+                        <td> = </td>
+                        <td><span id="paroxytone"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Metrum wiersza</td>
+                        <td> = </td>
+                        <td><span id="countSyllables"></span></td>
+                    </tr>
+                    <tr>
+                        <td>findRhymeArea()</td>
+                        <td> = </td>
+                        <td><span id="findRhymeArea"></span></td>
+                    </tr>
+                    <tr>
+                        <td>Warianty homofoniczne</td>
+                        <td> = </td>
+                        <td><span id="homophonicElements"></span></td>
+                    </tr>
+
+                </table>
+
             </div>
             <a id="teoria-link"></a>
 
         </div>
-        
+
         <br>
-     
+
         <!-- <hr class="jnkrpp-hr"> -->
-       
+
         <br>
         <div class="jnkrpp-about">
             <h2 class="jnkrpp-about__subtitle">Teoria</h2>
             <h3 class="jnkrpp-about__step-no"></h3>
-            <div class="jnkrpp-about__problem-desc"><strong>Wersja robocza silnika wyszukiwarki rymów</strong>, który w przeciwieństwie do internetowych słowników rymów (w jęz. polskim) potrafi samodzielnie obliczyć miejsce padania akcentu i dzięki temu wyznaczyć przestrzeń rymową (część słowa, która powinna się rymować). Oblicza też liczbę sylab i wykrywa (z marginesem błędu), w jakich przypadkach samogłoska <strong><em>i</em></strong> nie pełni funkcji zgłoskotwórczej (jest to niezbędne, aby prawidłowo wyznaczyć obszar współdźwięczności). Docelowo silnik będzie również zwracał tablicę wszystkich wariantów homofonicznych danego rymu, uwzględniając m.in. zjawisko ubezdźwięcznienia wygłosu czy pary głosek różnych ortograficznie, ale identycznie brzmiących (<strong><em>ó</em></strong> i <strong><em>u</em></strong>, <strong><em>rz</em></strong> i <strong><em>ż</em></strong>, <strong><em>ch</em></strong> i <strong><em>h</em></strong>). Silnik jest dodatkowo rozbudowywany o analizator wersyfikacyjny. 
+            <div class="jnkrpp-about__problem-desc"><strong>Wersja robocza silnika wyszukiwarki rymów</strong>, który w przeciwieństwie do internetowych słowników rymów (w jęz. polskim) potrafi samodzielnie obliczyć miejsce padania akcentu i dzięki temu wyznaczyć przestrzeń rymową (część słowa, która powinna się rymować). Oblicza też liczbę sylab i wykrywa (z marginesem błędu), w jakich przypadkach samogłoska <strong><em>i</em></strong> nie pełni funkcji zgłoskotwórczej (jest to niezbędne, aby prawidłowo wyznaczyć obszar współdźwięczności). Docelowo silnik będzie również zwracał tablicę wszystkich wariantów homofonicznych danego rymu, uwzględniając m.in. zjawisko ubezdźwięcznienia wygłosu czy pary głosek różnych ortograficznie, ale identycznie brzmiących (<strong><em>ó</em></strong> i <strong><em>u</em></strong>, <strong><em>rz</em></strong> i <strong><em>ż</em></strong>, <strong><em>ch</em></strong> i <strong><em>h</em></strong>). Silnik jest dodatkowo rozbudowywany o analizator wersyfikacyjny.
 
             </div>
             <h3 class="jnkrpp-about__step-no"><strong>Krok 1:</strong> Gdzie szukać rymu?</h3>
@@ -429,7 +423,7 @@ width:65%;
             <div class="jnkrpp-about__code-container--out">
                 <p class="jnkrpp-about__code-container--title">Kod:</p>
                 <div class="jnkrpp-about__code-container--inside">
-               <pre class="prettyprint">
+                    <pre class="prettyprint">
 function findLastWord(str) {
     var splitedVerse = str.split(" ");
     var last = splitedVerse.length - 1;
@@ -464,7 +458,7 @@ function findLastWord(str) {
             <div class="jnkrpp-about__code-container--out">
                 <p class="jnkrpp-about__code-container--title">Kod:</p>
                 <div class="jnkrpp-about__code-container--inside">
-                <pre class="prettyprint">
+                    <pre class="prettyprint">
 //vowel or consonant check - auxiliary function
 var isVowelCheck = function(letter) {
         var vowels = ["a", "e", "i", "o", "u", "y", "ą", "ę"];
@@ -538,7 +532,7 @@ function countSyllables(str) {
             <div class="jnkrpp-about__code-container--out">
                 <p class="jnkrpp-about__code-container--title">Kod:</p>
                 <div class="jnkrpp-about__code-container--inside">
-                <pre class="prettyprint">
+                    <pre class="prettyprint">
 //return rhyme type: oxytone
 function isOxytone(phrase) {
     var lastWord = findLastWord(phrase);
@@ -556,31 +550,33 @@ function isOxytone(phrase) {
 
             <br>
             <br>
-<div id="jnkrpp-about__see-more">
-            <h3 class="jnkrpp-about__step-no"><strong>Krok 4:</strong> Jak wyznaczyć przestrzeń rymową?</h3>
-            <p>... TODO ...</p>
-            <h3 class="jnkrpp-about__step-no"><strong>Krok 5:</strong> Jak wykryć wyraz enklityczny?</h3>
-            <p>... TODO ...</p>
+            <div id="jnkrpp-about__see-more">
+                <h3 class="jnkrpp-about__step-no"><strong>Krok 4:</strong> Jak wyznaczyć przestrzeń rymową?</h3>
+                <p>... TODO ...</p>
+                <h3 class="jnkrpp-about__step-no"><strong>Krok 5:</strong> Jak wykryć wyraz enklityczny?</h3>
+                <p>... TODO ...</p>
 
-            <h3 class="jnkrpp-about__step-no"><strong>Krok 6:</strong> Jak znaleźć wszystkie warianty homofoniczne (fonetycznie tożsame)?</h3>
-            <p>... TODO ...</p>
-            <h3 class="jnkrpp-about__step-no"><strong>Krok 7:</strong> Dyftongizacja monoftongów ą ę</h3>
-            <p>... TODO ...</p>
-            <h3 class="jnkrpp-about__step-no"><strong>Krok 8:</strong> Ubezdźwięcznienie wygłosu</h3>
-            <p>... TODO ...</p>
-            <h3 class="jnkrpp-about__step-no"><strong>Krok 9:</strong> Jak wykryć rym proparoksytoniczny?</h3>
-            <p>... TODO ...</p>
-           <!-- <h3 class="jnkrpp-about__step-no"><strong>Krok 10:</strong> C. K. Norwid: „Rym?... We wnętrzu leży, nie w końcach wierszy, |
+                <h3 class="jnkrpp-about__step-no"><strong>Krok 6:</strong> Jak znaleźć wszystkie warianty homofoniczne (fonetycznie tożsame)?</h3>
+                <p>... TODO ...</p>
+                <h3 class="jnkrpp-about__step-no"><strong>Krok 7:</strong> Dyftongizacja monoftongów ą ę</h3>
+                <p>... TODO ...</p>
+                <h3 class="jnkrpp-about__step-no"><strong>Krok 8:</strong> Ubezdźwięcznienie wygłosu</h3>
+                <p>... TODO ...</p>
+                <h3 class="jnkrpp-about__step-no"><strong>Krok 9:</strong> Jak wykryć rym proparoksytoniczny?</h3>
+                <p>... TODO ...</p>
+                <!-- <h3 class="jnkrpp-about__step-no"><strong>Krok 10:</strong> C. K. Norwid: „Rym?... We wnętrzu leży, nie w końcach wierszy, |
 Jak i gwiazdy nie tam są, gdzie świecą!”</h3>
             <p>... TODO ...</p> -->
-            
-</div>
-<button class="jnkrpp-button" id="jnkrpp-button__see-more" onclick="jnkrppSeeMore()">Czytaj dalej</button>
-        </div>
-         </div>
-        <div class="jnkrpp-footer"><br><br><p>©2019 M.W.</p></div>
 
-   
+            </div>
+            <button class="jnkrpp-button" id="jnkrpp-button__see-more" onclick="jnkrppSeeMore()">Czytaj dalej</button>
+        </div>
+    </div>
+    <div class="jnkrpp-footer">
+        <br>
+        <br>
+        <p>©2019 M.W.</p>
+    </div>
 
     <script>
         //trim inputtedText
@@ -752,17 +748,17 @@ Jak i gwiazdy nie tam są, gdzie świecą!”</h3>
         //summary functions
         var summaryFunctions = function() {
             clearMsgBox();
-            
+
             var inputtedText = document.getElementById("verse").value;
             inputtedText = inputtedText.toLowerCase();
             var trimmed = trimText(inputtedText);
             clearMsgBox();
             if (validate(trimmed) == false) {
-            clearResult();
+                clearResult();
                 return false;
             } else {
-            
-            displayResult();
+
+                displayResult();
                 var lastWord = findLastWord(trimmed);
                 document.getElementById("lastWord").innerHTML = lastWord;
                 //findLastLetter(trimmed);
@@ -817,59 +813,52 @@ Jak i gwiazdy nie tam są, gdzie świecą!”</h3>
         // }
 
         //find a rhyme area
-        
+
         //display the result function
-        
-        function displayResult(){
-        
-        document.getElementById("jnkrpp-analizator__result-box").style.display="block";
+
+        function displayResult() {
+
+            document.getElementById("jnkrpp-analizator__result-box").style.display = "block";
         }
-        
-         //clear the result function
-         function clearResult() {
-          document.getElementById("jnkrpp-analizator__result-box").style.display="none";
+
+        //clear the result function
+        function clearResult() {
+            document.getElementById("jnkrpp-analizator__result-box").style.display = "none";
         }
-        
-        
-        
+
         //lazy loading on click - see more
-        function jnkrppSeeMore(){
-        document.getElementById("jnkrpp-about__see-more").style.display="block";
-        document.getElementById("jnkrpp-button__see-more").style.display="none";
+        function jnkrppSeeMore() {
+            document.getElementById("jnkrpp-about__see-more").style.display = "block";
+            document.getElementById("jnkrpp-button__see-more").style.display = "none";
         }
-        
-       
-        
-        
-        
 
         //sticky navbar below  
-window.onload= function() {
-        function myFunctionStickyScroll() {
-            if (window.pageYOffset >= sticky) {
-                navbar.classList.add("jnkrpp-sticky")
-            } else {
-                navbar.classList.remove("jnkrpp-sticky");
+        window.onload = function() {
+            function myFunctionStickyScroll() {
+                if (window.pageYOffset >= sticky) {
+                    navbar.classList.add("jnkrpp-sticky")
+                } else {
+                    navbar.classList.remove("jnkrpp-sticky");
+                }
+            }
+            var navbar = document.getElementById("jnkrpp-navbar");
+            var sticky = navbar.offsetTop;
+            console.log(sticky);
+
+            // When the user scrolls down 100px from the top of the document, show the button
+            window.onscroll = function() {
+                myFunctionStickyScroll();
+                scrollFunction()
+            };
+
+            function scrollFunction() {
+                if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                    document.getElementById("jnkrpp-myBtnScrollingTop").style.display = "block";
+                } else {
+                    document.getElementById("jnkrpp-myBtnScrollingTop").style.display = "none";
+                }
             }
         }
-        var navbar = document.getElementById("jnkrpp-navbar");
-        var sticky = navbar.offsetTop;
-        console.log(sticky);
-
-        // When the user scrolls down 100px from the top of the document, show the button
-        window.onscroll = function() {
-            myFunctionStickyScroll();
-            scrollFunction()
-        };
-
-        function scrollFunction() {
-            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
-                document.getElementById("jnkrpp-myBtnScrollingTop").style.display = "block";
-            } else {
-                document.getElementById("jnkrpp-myBtnScrollingTop").style.display = "none";
-            }
-        }
-}
 
         // When the user clicks on the button, scroll to the top of the document
         function topFunction() {
@@ -881,16 +870,3 @@ window.onload= function() {
 </body>
 
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
